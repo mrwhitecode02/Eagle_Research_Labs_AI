@@ -1,0 +1,151 @@
+/* styles using css */
+
+/* general code */
+
+:root {
+    --mainbackground: #102C57;
+    --words: #f1f1f1;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--mainbackground);
+    color: var(--words);
+
+    /* *** **** ****** ***/
+
+
+    /* css ai code section */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.traffic-light, .pedestrian-light {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.light, .pedestrian-light .light {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.light.on, .pedestrian-light .light.on {
+    opacity: 1;
+}
+
+.light.red.on {
+    background-color: red;
+}
+
+.light.yellow.on {
+    background-color: yellow;
+}
+
+.light.green.on {
+    background-color: green;
+}
+
+.pedestrian-light .red.on {
+    background-color: red;
+}
+
+.pedestrian-light .green.on {
+    background-color: green;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* end code */
+
+
+
+
+/* Color picker */
+
+.color-picker-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#color-picker {
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.color-preview {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    transition: background-color 0.5s;
+}
+
+.color-info {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #050C9C;
+    border: 3px solid #f285;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes colorAnimation {
+    0% { background-color: #FFFFFF; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* end code */
+
+
+
+/*  */
