@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AI Personal Assistant  </title>
+    <link rel="shortcut icon" href="/img/nodos-de-ia.png" type="image/x-icon">
+    <link rel="stylesheet" href="/ownAIAssistant/styles.css">
+    <script src="https://kit.fontawesome.com/21e559e848.js" crossorigin="anonymous"></script>
+
+<script type="module">
+    //test code
+    console.log("heelo Joseph, js is working");
+
+    //manager functions
+
+    const $ = el => document.querySelector(el);
+
+    //recovery elements
+
+    const $form = $('form');
+    const $input = $('input');
+    const $template = $('template-preview');
+    const $messages = $('ul');
+    const $container = $('main');
+    const $btn = $('button');
+
+    //events managers
+
+    $form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const messgClean = $input.value.trim();
+
+        if (messgClean != '') {
+            $input.value = '';
+        }
+    });
+
+    function messageSend (msg, sender) {
+
+        const cloneTemplate = $template.content.cloneNode(true);
+
+        const $newMessage = cloneTemplate.querySelector('.message')
+
+        const $who = $newMessage.querySelector('.ans');
+
+        const $txt = $newMessage.querySelector('.txt');
+
+        //continuous coding...
+
+    }
+
+
+
+</script> 
+</head>
+<body>
+    <!-- create my own ai project -->
+
+    <main>
+        <ul>
+
+            <li class="message bot">
+                <span> GPT </span>
+                <span> Here is the response </span>
+            </li>
+
+            <li class="message user">
+                <span> You </span>
+                <span> Here the answer </span>
+            </li>
+
+            <li class="message userBackup">
+                <span> You </span>
+                <span> Here the long answer </span>
+            </li>
+
+        </ul>
+    </main>
+
+    <form>
+        <input type="text" name="message" placeholder="write your message">
+        <button type="submit"> <i class="fa-regular fa-paper-plane"></i> </button>
+    </form>
+
+    <template id="message-preview">
+        <li class="message">
+            <span class="ans">  </span>
+            <span class="txt">  </span>
+        </li>
+    </template>
+    
+</body>
+</html>
